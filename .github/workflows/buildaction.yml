@@ -1,17 +1,17 @@
 name: Cloud C2 Docker Image Build and Push
 
-on:
-  schedule:
-    - cron: '34 20 * * *'
-  push:
-    branches: [ main ]
-    # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ main ]
 # on:
-#   release:
-#     types: [published]
+#   schedule:
+#     - cron: '34 20 * * *'
+#   push:
+#     branches: [ main ]
+#     # Publish semver tags as releases.
+#     tags: [ 'v*.*.*' ]
+#   pull_request:
+#     branches: [ main ]
+on:
+  release:
+    types: [published]
 
 jobs:
   build:
