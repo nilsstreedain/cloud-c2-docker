@@ -1,0 +1,29 @@
+name: Cloud C2 Docker Image Build and Push
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Docker Build armv5
+      run: |
+        docker build . -t nilsstreedain/cloud-c2-docker:latest --build-arg ARCH=armv5
+    - name: Docker Build armv6
+      run: |
+        docker build . -t nilsstreedain/cloud-c2-docker:latest --build-arg ARCH=armv6
+    - name: Docker Build armv7
+      run: |
+        docker build . -t nilsstreedain/cloud-c2-docker:latest --build-arg ARCH=armv7
+    - name: Docker Build armv8
+      run: |
+        docker build . -t nilsstreedain/cloud-c2-docker:latest --build-arg ARCH=armv8
+    - name: Docker Build amd64
+      run: |
+        docker build . -t nilsstreedain/cloud-c2-docker:latest --build-arg ARCH=amd64
+    - name: Docker Build i386
+      run: |
+        docker build . -t nilsstreedain/cloud-c2-docker:latest --build-arg ARCH=i386
