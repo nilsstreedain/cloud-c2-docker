@@ -22,3 +22,13 @@ sudo docker run nilsstreedain/cloud-c2-docker
 
 ### Not Working Arches:
 - amd64
+
+
+
+## Credits
+
+- To the creators/contributors of [Cloud C2](https://shop.hak5.org/products/c2) at [Hak5](https://github.com/hak5) who make this project possible.
+
+## Disclaimer
+- I am in no way affiliated with Hak5 and this plugin is a personal project that I maintain in my free time.
+- Use this plugin entirely at your own risk - please see licence for more information.
